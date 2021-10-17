@@ -1,0 +1,11 @@
+.TopNav a {
+  margin: 10px;
+}
+
+.TopNav a:hover {
+  color: red;
+}
+
+.TopNav a.active {
+  color: darkgreen;
+}
