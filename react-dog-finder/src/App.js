@@ -1,11 +1,11 @@
 import './App.css';
 import DogList from './DogList';
-import DogDetails from './DogDetails';
 import TopNav from './TopNav';
 import duke from './images/duke.jpg';
 import perry from './images/perry.jpg';
 import tubby from './images/tubby.jpg';
 import whiskey from './images/whiskey.jpg';
+import CheckDogDetails from './CheckDogDetails';
 import { Route, BrowserRouter, Switch, Redirect } from 'react-router-dom';
 
 function App() {
@@ -15,10 +15,10 @@ function App() {
         <TopNav />
         <Switch>
           <Route exact path="/dogs">
-            <DogList />
+            <DogList dogs={dogs} />
           </Route>
           <Route path="/dogs/:name">
-            <DogDetails />
+            <CheckDogDetails dogs={dogs} />
           </Route>
           <Redirect to="/dogs" />
         </Switch>

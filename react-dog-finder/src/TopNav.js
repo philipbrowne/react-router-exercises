@@ -11,7 +11,7 @@ const TopNav = () => {
 
   return (
     <div className="TopNav">
-      <Navbar color="light" light expand="md">
+      <Navbar color="dark" light expand="md">
         <span className="TopNav-link navbar-brand">
           <Link
             to="/"
@@ -22,13 +22,13 @@ const TopNav = () => {
             Dog Finder!
           </Link>
         </span>
-        <NavbarToggler onClick={toggle} />
+        <NavbarToggler onClick={toggle} style={{ color: 'white' }} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             {dogs.map((dog) => (
               <NavItem key={dog.name}>
                 <NavLink
-                  to={`/dogs/${dog.name}`}
+                  to={`/dogs/${dog.name.toLowerCase()}`}
                   onClick={() => {
                     if (isOpen) toggle();
                   }}

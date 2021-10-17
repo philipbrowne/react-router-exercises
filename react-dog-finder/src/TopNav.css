@@ -1,11 +1,25 @@
+.TopNav {
+  font-weight: bold;
+  text-align: center;
+}
+
+.TopNav nav {
+  background-color: rgb(17, 47, 47) !important;
+  text-align: center !important;
+}
+
 .TopNav a {
   margin: 10px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
 }
 
 .TopNav a:hover {
-  color: red;
+  color: rgb(255, 123, 0);
+  text-decoration: none;
 }
 
 .TopNav a.active {
-  color: darkgreen;
+  color: rgb(0, 225, 255);
+  text-decoration: none;
 }

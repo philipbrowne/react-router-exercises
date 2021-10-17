@@ -6,21 +6,21 @@ import { MemoryRouter } from 'react-router-dom';
 // basic tests
 it('renders without crashing', function () {
   const { getByText } = render(
-    <MemoryRouter initialEntries={['/dogs']}>
+    <MemoryRouter initialEntries={['/colors']}>
       <App />
     </MemoryRouter>
   );
-  expect(getByText('Dog Finder')).toBeInTheDocument();
+  expect(getByText('Red')).toBeInTheDocument();
 });
 
-test('navbar links', () => {
+test('color links', () => {
   const { getByText, getAllByText } = render(
     <MemoryRouter initialEntries={['/']}>
       <App />
     </MemoryRouter>
   );
-  expect(getByText('Dog Finder')).toBeInTheDocument();
-  const link = getAllByText('Whiskey')[0];
+  expect(getByText('Red')).toBeInTheDocument();
+  const link = getAllByText('Red')[0];
   fireEvent.click(link);
-  expect(getByText('Facts about Whiskey')).toBeInTheDocument();
+  expect(getByText('Hi! Your color is')).toBeInTheDocument();
 });
